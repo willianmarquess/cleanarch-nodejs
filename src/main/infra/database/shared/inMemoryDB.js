@@ -1,1 +1,1 @@
-export const inMemoryDBUser = []
+export const inMemoryDB = []
