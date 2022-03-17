@@ -6,7 +6,7 @@ export default class CreateUserController {
         this.createUser = createUser
     }
 
-    async execute (request) {
+    async handle (request) {
         try {
             const { email, password } = request.body
             const createUserDTO = new CreateUserDTO(email, password)
