@@ -1,4 +1,4 @@
-import User from '../../../../domain/users/user.js'
+import User from '../../../domain/users/user.js'
 
 export default class CreateUser {
 

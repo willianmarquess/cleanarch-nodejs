@@ -1,4 +1,4 @@
-export default class UserRepository {
+export default class UserRepositoryInMemory {
     constructor (dbInstance) {
         this.dbInstance = dbInstance
     }

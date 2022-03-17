@@ -1,4 +1,4 @@
-import CreateUserDTO from '../../useCases/users/create/CreateUserDTO.js'
+import CreateUserDTO from '../../../application/useCases/users/create/CreateUserDTO.js'
 
 
 export default class CreateUserController {
