@@ -1,4 +1,4 @@
-import app from './server/serverExpress.js';
+import app from './server.js';
 
 
 const PORT = 3333

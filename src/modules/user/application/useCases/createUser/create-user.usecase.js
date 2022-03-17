@@ -1,6 +1,6 @@
 import User from '../../../domain/users/user.js'
 
-export default class CreateUser {
+export default class CreateUserUseCase {
 
     constructor (userRepository) {
         this.userRepository = userRepository

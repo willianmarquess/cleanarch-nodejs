@@ -2,15 +2,15 @@ import CreateUserDTO from '../../../application/useCases/users/create/CreateUser
 
 
 export default class CreateUserController {
-    constructor (createUser) {
-        this.createUser = createUser
+    constructor (createUserUseCase) {
+        this.createUserUseCase = createUserUseCase
     }
 
     async handle (request) {
         try {
             const { email, password } = request.body
             const createUserDTO = new CreateUserDTO(email, password)
-            const user = await this.createUser.execute(createUserDTO)
+            const user = await this.createUserUseCase.execute(createUserDTO)
             return {
                 body: user,
                 statusCode: 200
@@ -18,7 +18,7 @@ export default class CreateUserController {
         } catch (error) {
             return {
                 body: { error: error.message },
-                statusCode: 200
+                statusCode: 400
             } 
         }
     }
