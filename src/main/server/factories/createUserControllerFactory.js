@@ -1,10 +1,11 @@
-import CreateUserController from '../../modules/user/createUser/CreateUserController.js';
-import CreateUser from '../../application/useCases/users/create/CreateUser.js';
-import { inMemoryDB } from '../../infra/database/shared/inMemoryDB.js';
-import UserRepository from '../../modules/user/infra/repository/inMemory/user.repository.js';
+import CreateUserController from '../../../modules/user/application/controller/create-user.controller.js'
+import CreateUserUseCase from '../../../modules/user/application/useCases/createUser/create-user.usecase.js'
+import { UsersInMemoryDB } from '../../../modules/user/infra/repository/user-inmemory.db.js'
+import UserRepositoryInMemory from '../../../modules/user/infra/repository/user.repository.js'
+
 
 export default function createUserControllerFactory () {
-    const userRepository = new UserRepository(inMemoryDB)
-    const createUser = new CreateUser(userRepository)
+    const userRepository = new UserRepositoryInMemory(UsersInMemoryDB)
+    const createUser = new CreateUserUseCase(userRepository)
     return new CreateUserController(createUser)
 }
