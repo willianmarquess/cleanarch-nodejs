@@ -1,15 +1,16 @@
-import User from '../../../domain/users/user.js'
+import User from '../../../../domain/users/user.entity.js'
+
 
 export default class CreateUserUseCase {
 
     constructor (userRepository) {
-        this.userRepository = userRepository
+        this.userRepository = userRepository 
     }
 
     async execute (createUserDTO) {
-        const userAlreadyExists = await this.userRepository.findbyEmail(createUserDTO.email)
+        const userAlreadyExists = await this.userRepository.findByEmail(createUserDTO.email)
         if (userAlreadyExists) throw new Error('User already exists')
         const user = await this.userRepository.save(new User(null, createUserDTO.email, createUserDTO.password))
-        return user
+        return user 
     }
 }

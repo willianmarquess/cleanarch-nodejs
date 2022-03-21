@@ -1,6 +1,6 @@
-import Entity from '../shared/entity.js'
+import BaseEntity from '../shared/base.entity.js'
 
-export default class User extends Entity {
+export default class User extends BaseEntity {
   constructor (id, email, password) {
     super(id)
     this.email = email
