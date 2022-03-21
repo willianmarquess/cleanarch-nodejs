@@ -1,4 +1,4 @@
-import CustomError from '../../../../../main/shared/errors/custom.error.js';
+import CustomError from '../../../../../shared/helpers/errors/custom.error.js';
 
 export default class UserAlreadyExistsError extends CustomError {
     constructor () {

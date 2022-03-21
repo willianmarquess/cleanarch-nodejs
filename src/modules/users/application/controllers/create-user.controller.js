@@ -1,9 +1,6 @@
-import InvalidParamsError from '../../../main/shared/errors/invalid-params.error.js'
-import Http from '../../../main/shared/http/http.js'
-import CreateUserDTO from '../../useCase/users/createUser/dto/create-user.dto.js'
-
-
-
+import InvalidParamsError from '../../../shared/helpers/errors/invalid-params.error.js'
+import Http from '../../../shared/helpers/http/http.js'
+import CreateUserDTO from '../useCases/createUser/dto/create-user.dto.js'
 
 export default class CreateUserController {
     constructor (createUserUseCase) {

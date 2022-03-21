@@ -1,6 +1,6 @@
-import Validable from '../../../../../main/shared/validation/validable.js'
+import Validable from '../../../../../shared/helpers/validation/validable.js'
 
-export default class CreateUserDTO extends Validable{
+export default class CreateUserDTO extends Validable {
     constructor (email, password) {
         super()
         this.email = email

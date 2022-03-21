@@ -1,4 +1,4 @@
-import Http from '../../../main/shared/http/http.js'
+import Http from '../../../shared/helpers/http/http.js'
 
 export default class FindAllUserController {
     constructor (findAllUseCase) {

@@ -1,7 +1,7 @@
-import CreateUserController from '../../../application/controller/users/create-user.controller.js'
-import CreateUserUseCase from '../../../application/useCase/users/createUser/create-user.usecase.js'
-import { UsersInMemoryDB } from '../../../infra/repository/users/user-in-memory.db.js'
-import UserRepositoryInMemory from '../../../infra/repository/users/user-in-memory.repository.js'
+import CreateUserController from '../../../modules/users/application/controllers/create-user.controller.js'
+import CreateUserUseCase from '../../../modules/users/application/useCases/createUser/create-user.usecase.js'
+import { UsersInMemoryDB } from '../../../modules/users/infra/repositories/user-in-memory.db.js'
+import UserRepositoryInMemory from '../../../modules/users/infra/repositories/user-in-memory.repository.js'
 
 export default function createUserControllerFactory () {
     const userRepository = new UserRepositoryInMemory(UsersInMemoryDB)

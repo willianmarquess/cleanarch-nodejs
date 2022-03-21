@@ -1,7 +1,8 @@
-import FindAllUserController from '../../../application/controller/users/findall-user.controller.js'
-import FindAllUserUseCase from '../../../application/useCase/users/findAllUser/findall-user.usecase.js'
-import { UsersInMemoryDB } from '../../../infra/repository/users/user-in-memory.db.js'
-import UserRepositoryInMemory from '../../../infra/repository/users/user-in-memory.repository.js'
+import FindAllUserController from '../../../modules/users/application/controllers/findall-user.controller.js'
+import FindAllUserUseCase from '../../../modules/users/application/useCases/findAllUser/findall-user.usecase.js'
+import { UsersInMemoryDB } from '../../../modules/users/infra/repositories/user-in-memory.db.js'
+import UserRepositoryInMemory from '../../../modules/users/infra/repositories/user-in-memory.repository.js'
+
 
 export default function findAllUserControllerFactory () {
     const userRepository = new UserRepositoryInMemory(UsersInMemoryDB)
