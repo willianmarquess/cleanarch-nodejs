@@ -1,8 +1,8 @@
-import express from 'express'
-import userRouter from './routes/userRoutes.js'
+import app from './server.js';
 
-const app = express()
 
-app.use(userRouter)
+const PORT = 3333
 
-export default app
+app.listen(PORT, () => {
+    console.log('app is running!');
+})
