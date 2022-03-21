@@ -1,3 +1,5 @@
+import Http from '../../../main/shared/http/http.js'
+
 export default class FindAllUserController {
     constructor (findAllUseCase) {
         this.findAllUseCase = findAllUseCase
@@ -6,15 +8,9 @@ export default class FindAllUserController {
     async handle () {
         try {
             const users = await this.findAllUseCase.execute()
-            return {
-                body: users,
-                statusCode: 200
-            }
+            return Http.ok(users)
         } catch (error) {
-            return {
-                body: { error: error.message },
-                statusCode: 400
-            } 
+            return Http.error(error)
         }
     }
 }
