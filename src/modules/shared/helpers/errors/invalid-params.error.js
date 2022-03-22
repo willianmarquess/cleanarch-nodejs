@@ -1,4 +1,4 @@
-import CustomError from './custom.error.js';
+import CustomError from './custom.error.js'
 
 export default class InvalidParamsError extends CustomError {
     constructor (errors) {

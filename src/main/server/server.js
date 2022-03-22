@@ -1,8 +1,8 @@
-import app from './app.js';
+import app from './app.js'
 
 
-const PORT = 3333
+const PORT = '3333'
 
 app.listen(PORT, () => {
-    console.log('app is running!');
+    console.log('app is running!')
 })
